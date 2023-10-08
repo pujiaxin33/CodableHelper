@@ -14,6 +14,13 @@
 		B2ACAD722AD24245005485AC /* CodableHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACAD712AD24245005485AC /* CodableHelperTests.swift */; };
 		B2ACAD7C2AD24245005485AC /* CodableHelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACAD7B2AD24245005485AC /* CodableHelperUITests.swift */; };
 		B2ACAD7E2AD24245005485AC /* CodableHelperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACAD7D2AD24245005485AC /* CodableHelperUITestsLaunchTests.swift */; };
+		B2ACAD912AD24253005485AC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2ACAD902AD24253005485AC /* Cocoa.framework */; };
+		B2ACAD962AD24253005485AC /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACAD952AD24253005485AC /* SourceEditorExtension.swift */; };
+		B2ACAD982AD24253005485AC /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACAD972AD24253005485AC /* SourceEditorCommand.swift */; };
+		B2ACAD9D2AD24253005485AC /* CodableHelperEx.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B2ACAD8E2AD24253005485AC /* CodableHelperEx.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B2ACADA32AD24278005485AC /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2ACADA22AD24278005485AC /* XcodeKit.framework */; };
+		B2ACADA42AD24278005485AC /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2ACADA22AD24278005485AC /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2ACADAB2AD2BAC3005485AC /* PropertyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACADAA2AD2BAC3005485AC /* PropertyEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +38,39 @@
 			remoteGlobalIDString = B2ACAD5B2AD24243005485AC;
 			remoteInfo = CodableHelper;
 		};
+		B2ACAD9B2AD24253005485AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2ACAD542AD24243005485AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2ACAD8D2AD24253005485AC;
+			remoteInfo = CodableHelperEx;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B2ACADA12AD24253005485AC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B2ACAD9D2AD24253005485AC /* CodableHelperEx.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2ACADA52AD24278005485AC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B2ACADA42AD24278005485AC /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B2ACAD5C2AD24243005485AC /* CodableHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodableHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +84,15 @@
 		B2ACAD772AD24245005485AC /* CodableHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodableHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2ACAD7B2AD24245005485AC /* CodableHelperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHelperUITests.swift; sourceTree = "<group>"; };
 		B2ACAD7D2AD24245005485AC /* CodableHelperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHelperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B2ACAD8E2AD24253005485AC /* CodableHelperEx.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CodableHelperEx.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2ACAD902AD24253005485AC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B2ACAD922AD24253005485AC /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		B2ACAD952AD24253005485AC /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		B2ACAD972AD24253005485AC /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		B2ACAD992AD24253005485AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2ACAD9A2AD24253005485AC /* CodableHelperEx.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodableHelperEx.entitlements; sourceTree = "<group>"; };
+		B2ACADA22AD24278005485AC /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		B2ACADAA2AD2BAC3005485AC /* PropertyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +117,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2ACAD8B2AD24253005485AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2ACAD912AD24253005485AC /* Cocoa.framework in Frameworks */,
+				B2ACADA32AD24278005485AC /* XcodeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +135,8 @@
 				B2ACAD5E2AD24243005485AC /* CodableHelper */,
 				B2ACAD702AD24245005485AC /* CodableHelperTests */,
 				B2ACAD7A2AD24245005485AC /* CodableHelperUITests */,
+				B2ACAD942AD24253005485AC /* CodableHelperEx */,
+				B2ACAD8F2AD24253005485AC /* Frameworks */,
 				B2ACAD5D2AD24243005485AC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +147,7 @@
 				B2ACAD5C2AD24243005485AC /* CodableHelper.app */,
 				B2ACAD6D2AD24245005485AC /* CodableHelperTests.xctest */,
 				B2ACAD772AD24245005485AC /* CodableHelperUITests.xctest */,
+				B2ACAD8E2AD24253005485AC /* CodableHelperEx.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +181,28 @@
 			path = CodableHelperUITests;
 			sourceTree = "<group>";
 		};
+		B2ACAD8F2AD24253005485AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2ACADA22AD24278005485AC /* XcodeKit.framework */,
+				B2ACAD902AD24253005485AC /* Cocoa.framework */,
+				B2ACAD922AD24253005485AC /* XcodeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2ACAD942AD24253005485AC /* CodableHelperEx */ = {
+			isa = PBXGroup;
+			children = (
+				B2ACAD952AD24253005485AC /* SourceEditorExtension.swift */,
+				B2ACAD972AD24253005485AC /* SourceEditorCommand.swift */,
+				B2ACADAA2AD2BAC3005485AC /* PropertyEntity.swift */,
+				B2ACAD992AD24253005485AC /* Info.plist */,
+				B2ACAD9A2AD24253005485AC /* CodableHelperEx.entitlements */,
+			);
+			path = CodableHelperEx;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,10 +213,12 @@
 				B2ACAD582AD24243005485AC /* Sources */,
 				B2ACAD592AD24243005485AC /* Frameworks */,
 				B2ACAD5A2AD24243005485AC /* Resources */,
+				B2ACADA12AD24253005485AC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B2ACAD9C2AD24253005485AC /* PBXTargetDependency */,
 			);
 			name = CodableHelper;
 			productName = CodableHelper;
@@ -177,6 +261,24 @@
 			productReference = B2ACAD772AD24245005485AC /* CodableHelperUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B2ACAD8D2AD24253005485AC /* CodableHelperEx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2ACAD9E2AD24253005485AC /* Build configuration list for PBXNativeTarget "CodableHelperEx" */;
+			buildPhases = (
+				B2ACAD8A2AD24253005485AC /* Sources */,
+				B2ACAD8B2AD24253005485AC /* Frameworks */,
+				B2ACAD8C2AD24253005485AC /* Resources */,
+				B2ACADA52AD24278005485AC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodableHelperEx;
+			productName = CodableHelperEx;
+			productReference = B2ACAD8E2AD24253005485AC /* CodableHelperEx.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,6 +300,9 @@
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = B2ACAD5B2AD24243005485AC;
 					};
+					B2ACAD8D2AD24253005485AC = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 				};
 			};
 			buildConfigurationList = B2ACAD572AD24243005485AC /* Build configuration list for PBXProject "CodableHelper" */;
@@ -216,6 +321,7 @@
 				B2ACAD5B2AD24243005485AC /* CodableHelper */,
 				B2ACAD6C2AD24245005485AC /* CodableHelperTests */,
 				B2ACAD762AD24245005485AC /* CodableHelperUITests */,
+				B2ACAD8D2AD24253005485AC /* CodableHelperEx */,
 			);
 		};
 /* End PBXProject section */
@@ -238,6 +344,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B2ACAD752AD24245005485AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2ACAD8C2AD24253005485AC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,6 +386,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2ACAD8A2AD24253005485AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2ACAD962AD24253005485AC /* SourceEditorExtension.swift in Sources */,
+				B2ACAD982AD24253005485AC /* SourceEditorCommand.swift in Sources */,
+				B2ACADAB2AD2BAC3005485AC /* PropertyEntity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -285,6 +408,11 @@
 			isa = PBXTargetDependency;
 			target = B2ACAD5B2AD24243005485AC /* CodableHelper */;
 			targetProxy = B2ACAD782AD24245005485AC /* PBXContainerItemProxy */;
+		};
+		B2ACAD9C2AD24253005485AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2ACAD8D2AD24253005485AC /* CodableHelperEx */;
+			targetProxy = B2ACAD9B2AD24253005485AC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -416,12 +544,14 @@
 		B2ACAD822AD24245005485AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CodableHelper/CodableHelper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UNR72UUVF4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -441,12 +571,14 @@
 		B2ACAD832AD24245005485AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CodableHelper/CodableHelper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UNR72UUVF4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -531,6 +663,58 @@
 			};
 			name = Release;
 		};
+		B2ACAD9F2AD24253005485AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CodableHelperEx/CodableHelperEx.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UNR72UUVF4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CodableHelperEx/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CodableHelperEx;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.monkey.CodableHelper.CodableHelperEx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B2ACADA02AD24253005485AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CodableHelperEx/CodableHelperEx.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UNR72UUVF4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CodableHelperEx/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CodableHelperEx;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.monkey.CodableHelper.CodableHelperEx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -566,6 +750,15 @@
 			buildConfigurations = (
 				B2ACAD882AD24245005485AC /* Debug */,
 				B2ACAD892AD24245005485AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2ACAD9E2AD24253005485AC /* Build configuration list for PBXNativeTarget "CodableHelperEx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2ACAD9F2AD24253005485AC /* Debug */,
+				B2ACADA02AD24253005485AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
