@@ -86,21 +86,27 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     
     
     func isProperty(_ string: String) -> Bool {
+        var string = string
+        var prefixs = ["public", "private", "internal", "open"]
+        prefixs.forEach({ prefix in
+            if string.hasPrefix(prefix) {
+                string = String(string.dropFirst(prefix.count))
+            }
+        })
         return string.hasPrefix("let") || string.hasPrefix("var")
     }
     
 //    let name: name?    // 这是name
 //    let options: [[String: Any]]?    // 这是注释
     func transformToPropertyEntity(_ string: String) -> PropertyEntity {
-        var string = string
-        string.removeSubrange(string.startIndex...string.index(string.startIndex, offsetBy: 2))
+        var string = deleteStringBeforePropertyTag(string)
         string = string.components(separatedBy: "//").first ?? ""
         var components = string.components(separatedBy: ":")
         let propertyName = components.first ?? ""
         components.removeFirst()
         components = components.filter { component in
             var component = component
-            component.replacingOccurrences(of: " ", with: "")
+            component = component.replacingOccurrences(of: " ", with: "")
             return !component.isEmpty
         }
         var className = components.reduce("") { partialResult, item in
@@ -118,6 +124,18 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             isOptional = true
         }
         return .init(propertyName: propertyName, className: className, isOptional: isOptional)
+    }
+    
+    func deleteStringBeforePropertyTag(_ string: String) -> String {
+        var string = string
+        var prefixs = ["public", "private", "internal", "open"]
+        prefixs.forEach({ prefix in
+            if string.hasPrefix(prefix) {
+                string = String(string.dropFirst(prefix.count))
+            }
+        })
+        string.removeSubrange(string.startIndex...string.index(string.startIndex, offsetBy: 2))
+        return string
     }
     
 //    enum CodingKeys: String, CodingKey {
